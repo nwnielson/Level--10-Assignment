@@ -41,11 +41,13 @@ while keep_analyzing :
         "Less Than 6 Wins": season_stats.query("Win < 6")["Team"]
         }
         
+        
         #Display results
         for win_category in team_info:
-            print(f"\n{win_category}:")
+            print(f"\n{win_category}:\n")
             for team in team_info[win_category]:
                 print(team)
+            print("-----------------------")
         
         #Loops until user gives valid answer of whether they want to analyze more seasons.
         while True:
@@ -58,7 +60,7 @@ while keep_analyzing :
             
             #If there is any error, prompts user to give valid input (yes or no)  
             except:
-                print("Invalid response. Please answer with yes or no.\n")
+                print("\nInvalid response. Please answer with yes or no.")
             
             #If no error, checks if user wants to analyze more and repeats if yes, quits program if no
             else:
