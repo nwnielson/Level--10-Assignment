@@ -41,7 +41,6 @@ while keep_analyzing :
         "Less Than 6 Wins": season_stats.query("Win < 6")["Team"]
         }
         
-        
         #Display results
         for win_category in team_info:
             print(f"\n{win_category}:\n")
